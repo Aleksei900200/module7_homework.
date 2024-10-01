@@ -1,18 +1,23 @@
-let numbers = [2, 3, '+'];
-let numbers1 = [2, 3, '-'];
-let numbers2 = [2, 3, '*'];
-let numbers3 = [2, 3, '/'];
+const numbersOne = [2, 3, '+'];
+const numbersTwo = [2, 3, '-'];
+const numbersThree = [2, 3, '*'];
+const numbersFour = [2, 3, '/'];
 
 function calculate(a, b, operator) {
-  let result;
-  operator === '+'
-    ? (result = a + b)
-    : operator === '-'
-    ? (result = a - b)
-    : operator === '*'
-    ? (result = a * b)
-    : (result = a / b);
-  return result;
+  switch (operator) {
+    case '+':
+      return a + b;
+      break;
+    case '-':
+      return a - b;
+      break;
+    case '*':
+      return a * b;
+      break;
+
+    default:
+      return a / b;
+  }
 }
 
 console.log(calculate(2, 6, '+'));
@@ -20,7 +25,10 @@ console.log(calculate(2, 6, '*'));
 console.log(calculate(2, 6, '-'));
 console.log(calculate(2, 6, '/').toFixed(2));
 
-console.log(calculate.apply(null, numbers));
-console.log(calculate.apply(null, numbers1));
-console.log(calculate.apply(null, numbers2));
-console.log(calculate.apply(null, numbers3).toFixed(2));
+console.log(calculate.apply(null, numbersOne));
+console.log(calculate.apply(null, numbersTwo));
+console.log(calculate.apply(null, numbersThree));
+console.log(calculate.apply(null, numbersFour).toFixed(2));
+
+
+ 

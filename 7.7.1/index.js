@@ -3,8 +3,8 @@ const person = {
 	Age: 52
 };
 
-function printInfo() {
+function PrintInfo() {
 	console.log(`Hello, ${this.Name} ${this.Age}!`);
 }
 
-printInfo.call(person)
+PrintInfo.call(person)
